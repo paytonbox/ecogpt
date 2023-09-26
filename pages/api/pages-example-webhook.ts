@@ -17,5 +17,6 @@ export default function handler(
 ) {
   const twiml = new MessagingResponse();
   twiml.message("This is a test");
+  res.setHeader("content-type", "text/xml");
   res.status(200).send(twiml.toString());
 }
